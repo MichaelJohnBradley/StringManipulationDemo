@@ -6,18 +6,18 @@ namespace UnitTests
     [TestClass]
     public class StringManipulationServiceTests
     {
-        private readonly StringManipulationService _repository;       
+        private readonly IStringManipulationService _service;       
 
         public StringManipulationServiceTests()
         {
-            _repository = new StringManipulationService();
+            _service = new StringManipulationService();
         }
 
         [TestMethod]
         public void UppercaseTest()
         {
             var expected = "HELLO WORLD";
-            var result = _repository.UppercaseAllLettersInString("Hello world");
+            var result = _service.UppercaseAllLettersInString("Hello world");
             
             Assert.IsTrue(expected == result);
         }
@@ -26,7 +26,7 @@ namespace UnitTests
         public void ReverseTest()
         {
             var expected = "dlrow olleh";
-            var result = _repository.ReverseString("hello world");
+            var result = _service.ReverseString("hello world");
 
             Assert.IsTrue(expected == result);
         }

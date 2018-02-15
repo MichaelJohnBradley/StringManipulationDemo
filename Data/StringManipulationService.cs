@@ -2,7 +2,7 @@
 
 namespace Services
 {
-    public class StringManipulationService
+    public class StringManipulationService : IStringManipulationService
     {
         public string UppercaseAllLettersInString(string phrase)
         {
