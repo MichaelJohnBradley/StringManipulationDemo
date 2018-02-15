@@ -9,12 +9,13 @@ namespace Interview.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController(StringManipulationService stringManipulationService)
+        private readonly IStringManipulationService _stringManipulationService;
+
+        public HomeController(IStringManipulationService stringManipulationService)
         {
             _stringManipulationService = stringManipulationService;
         }
-
-        private readonly StringManipulationService _stringManipulationService;
+        
         public IActionResult Index()
         {
             return View();
