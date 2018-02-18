@@ -269,11 +269,6 @@ footer p {
     color: #fdcc52;
 }
 
-.no-gutter > [class*='col-'] {
-    padding-right: 0;
-    padding-left: 0;
-}
-
 .btn-outline {
     color: white;
     border: 1px solid;
@@ -297,6 +292,10 @@ footer p {
     font-size: 11px;
     padding: 15px 45px;
 }
+.list-addninfo {
+    font-size: 3em;
+}
+
 /*Media Queries*/
 @media (min-width: 992px) {
     header.topheader {
@@ -322,5 +321,5 @@ footer p {
 
     header.topheader .device-container {
         max-width: 325px;
-    }
+    }   
 }
